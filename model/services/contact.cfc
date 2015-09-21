@@ -33,10 +33,6 @@ component accessors=true {
         return contact;
     }
 
-    function getfullName() {
-        return rc.fullName;
-    }
-	
 
 	
     function save( contact ) {
