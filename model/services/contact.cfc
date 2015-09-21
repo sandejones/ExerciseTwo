@@ -1,45 +1,49 @@
 component accessors=true {
 
-    property contactService;
-    property fullName;
-    property email;
-    property subject;
-    property message;
-    property setat;
-	
 	variables.contact = { };
 
-    function init(contactService, beanFactory) {
-		var contact = "";
-		
-		//contact = variables.beanFactory.getBean( "contactBean" );
-        //contact = variables.setBeanFactory( "contactBean"  ) ;
-        //contact.fullName = rc.fullName;
-        //contact.email;
-        //contact.subject;
-        //contact.message;
+    function init(contact) {
 
+        this.fullName = contact.fullName;
+        this.email = contact.email;
+        this.subject = contact.subject;
+        this.message = contact.message;
 		return this;
     }
 
 
     function get() {
+        return this;
+    }
+
+    function getStruct() {
         var contact = {};
-        //writeDump(arguments);
-        contact.fullName = arguments.fullName;
-        contact.email = arguments.email;
-        contact.subject = arguments.subject;
-        contact.message = arguments.message; 
+        
+        contact.fullName = ucase(this.fullName);
+        contact.email = ucase(this.email);
+        contact.subject = ucase(this.subject);
+        contact.message = ucase(this.message); 
+        
         return contact;
+    }
+	
+    function save( contact ) {
+        variables.contact.fullName = contact.fullName;
+        variables.contact.email = contact.email;
+        variables.contact.subject = contact.subject;
+        variables.contact.message = contact.message;      
+
+        return variables.contact;
     }
 
 
-	
-    function save( contact ) {
-        contact.fullName = rc.fullName;
-        contact.email = rc.email;
-        contact.subject = rc.subject;
-        contact.message = rc.message;        
+    function load() {
+        this.fullName = variables.contact.fullName;
+        this.email = variables.contact.email;
+        this.subject = variables.contact.subject;
+        this.message = variables.contact.message;      
+
+        return this;
     }
 
 }
