@@ -13,7 +13,16 @@ component accessors=true {
 
 
     function get() {
-        return this;
+
+        var contact = {};
+        
+        contact.fullName = this.fullName;
+        contact.email = this.email;
+        contact.subject = this.subject;
+        contact.message = this.message; 
+        
+        return contact;        
+        //return this;
     }
 
     function getStruct() {
@@ -26,24 +35,25 @@ component accessors=true {
         
         return contact;
     }
-	
-    function save( contact ) {
-        variables.contact.fullName = contact.fullName;
-        variables.contact.email = contact.email;
-        variables.contact.subject = contact.subject;
-        variables.contact.message = contact.message;      
 
-        return variables.contact;
-    }
+    /*
+        function save( contact ) {
+            variables.contact.fullName = contact.fullName;
+            variables.contact.email = contact.email;
+            variables.contact.subject = contact.subject;
+            variables.contact.message = contact.message;      
+
+            return variables.contact;
+        }
 
 
-    function load() {
-        this.fullName = variables.contact.fullName;
-        this.email = variables.contact.email;
-        this.subject = variables.contact.subject;
-        this.message = variables.contact.message;      
+        function load() {
+            this.fullName = variables.contact.fullName;
+            this.email = variables.contact.email;
+            this.subject = variables.contact.subject;
+            this.message = variables.contact.message;      
 
-        return this;
-    }
-
+            return this;
+        }
+    */
 }
