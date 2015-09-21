@@ -1,11 +1,14 @@
 <!--- save.cfm --->
 <cfoutput>
-Thank you <u>#rc.fullName#</u> for your submition.
-    We have sent a confirmation email to <u>#rc.email#</u>.
+Thank you <u>#rc.contact.fullName#</u> for your submition.
+    We have sent a confirmation email to <u>#rc.contact.email#</u>.
 <br/>
-Subject: #rc.subject#.
+Subject: #rc.contact.subject#.
 <div><div id="title">Message:</div>
-    #rc.message#
+    #rc.contact.message#
 </div>
 </cfoutput>
-<cfdump var="#variables.FW1APP.CACHE.CONTROLLERS.contact#"></cfdump>
+
+<cfscript>
+  //writeDump(rc.contact);
+</cfscript>

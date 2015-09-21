@@ -6,7 +6,7 @@ component extends="framework.one" {
 	// FW/1 - configuration:
 	variables.framework = {
 		home = "contact.default",
-        trace = true
+        trace = false
 	};
 	
 }

@@ -20,7 +20,7 @@
 	</div>
 	
 	<div class="field form-group">
-      <label for="message">Message (20 chars min, 200 max) :</label><br/>
+      <label for="message">Message:</label><br/>
       <textarea name="message" parsley-trigger="keyup" parsley-rangelength="[20,200]" class="form-control"></textarea>
 	</div>    
 

@@ -30,6 +30,8 @@ body {font: 75%/1.5em "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; te
 #tertiary {}
 #footer {margin: 0 auto; padding: 1.5em 0; text-align: center;}
 #footer p {margin: 0 0 0.2em 0;}
+#contactform {width: 800px;}
+
 
 /* ----- HEADINGS ----- */
 h1, h2, h3, h4, h5, h6 {margin: 15px 0;}

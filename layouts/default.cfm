@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Contact Form Submit</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -16,10 +17,6 @@
 	
 	<ul class="nav horizontal clear">
 		<li><a href="index.cfm">Home</a></li>
-        <!---
-		<li><a href="index.cfm?action=user.list" title="View the list of users">Users</a></li>
-		<li><a href="index.cfm?action=user.form" title="Fill out form to add new user">Add User</a></li>
-        --->
 		<li><a href="index.cfm?reload=true" title="Resets framework cache">Reload</a></li>
 	</ul>
 	
@@ -32,10 +29,4 @@
 </div>
 
 </body>
-</html>
-
-    
-    
-</body>
-
 </html>
