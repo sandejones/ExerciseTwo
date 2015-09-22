@@ -8,9 +8,10 @@
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.1.2/parsley.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </head>
 
-<body>
+<body ng-app="">
 
 <h3>Contact Info</h3>
 
@@ -21,26 +22,26 @@
 	
 	<div class="field form-group">
 		<label for="fullName">Your Name:</label>
-		<input type="text" name="fullName" id="fullName" class="form-control" value="" required >
+		<input type="text" name="fullName" id="fullName" ng-model="fullName" class="form-control" value="" required >
 	</div>
 
 	<div class="field form-group">
 		<label for="email">Email:</label>
-		<input type="email" name="email" id="email" class="form-control" value="" parsley-trigger="change" required>
+		<input type="email" name="email" id="email" ng-model="email" class="form-control" value="" parsley-trigger="change" required>
 	</div>
 	
 	<div class="field form-group">
 		<label for="subject">Subject:</label>
-		<input type="text" name="subject" id="subject" class="form-control" value="" required>
+		<input type="text" name="subject" id="subject" ng-model="subject" class="form-control" value="" required>
 	</div>
 	
 	<div class="field form-group">
       <label for="message">Message (20 chars min, 200 max) :</label><br/>
-      <textarea name="message" parsley-trigger="keyup" parsley-rangelength="[20,200]" class="form-control"></textarea>
+      <textarea name="message" parsley-trigger="keyup" ng-model="message" parsley-rangelength="[20,200]" class="form-control"></textarea>
 	</div>    
 
 	<div class="control form-group">
-		<input type="submit" value="Send Request">
+		<input type="submit" value="Send Request">{{fullName}}
 	</div>
 	
 </form>    
